@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- I found this from watching youtube videos. It's called font font-awesome.
+  You just place the font-awesome CDN inside the head tag to use the
+  applications fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO App</title>
+  <!-- bootstrap cdn link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="app">
+    <h4 class="mb-3">Buzzy Bee Cleaning App</h4>
+
+    <!-- allows me to add new customer to app list: \
+    (This is also where the starter code goes)-->
+    <!-- div with id addNew will open the modal -->
+    <!-- the i is an icon from font-awesome -->
+    <div id="addNew" data-bs-toggle="modal" data-bs-target="#form">
+      <span>Add New Customer</span>
+      <i class="fas fa-plus"></i>
+    </div>
+
+    <!-- Modal -->
+    <!-- This has three input fields which will be name, date, and description
+    for this project. -->
+    <form class="modal fade" id="form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add New Customer</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Customer Name</p>
+            <input type="text" class="form-control" name="" id="textInput">
+            <div id="msg"></div>
+            <br>
+            <p>Scheduled Cleaning Day</p>
+            <input type="date" class="form-control" name="" id="dateInput">
+            <br>
+            <p>Description</p>
+            <textarea name="" class="form-control" id="textarea" cols="30" rows="5"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" id="add" class="btn btn-primary">Add</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <h5 class="text-center my-3">Customers</h5>
+    <!-- this will be so we can see the customers we created: -->
+    <div id="customers">
+
+    </div>
+  </div>
+</body>
+<script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</html>
